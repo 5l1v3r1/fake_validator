@@ -6,6 +6,8 @@ go:
 install:
   - go get gopkg.in/check.v1
   - go get github.com/gorilla/mux
+  - go get github.com/golang/lint/golint
+  - ln -s ${TRAVIS_BUILD_DIR} $HOME/gopath/src/github.com/fake_validator
 
 script:
   - go vet ./...
