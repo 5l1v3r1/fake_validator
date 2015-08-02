@@ -25,7 +25,7 @@ func NewNumberValidator(number string) Validator {
 func (n NumberValidator) Validate() (bool, error) {
 	num, err := strconv.ParseInt(n.number, 10, 64)
 	if err != nil {
-		return false, err
+		return false, ErrorWrongInput
 	}
 
 	// Number

@@ -21,7 +21,7 @@ var EndpointRoutes = Routes{
 	Route{
 		Name:        "NumberValidator",
 		Method:      "GET",
-		Pattern:     "/validate/number/${number}",
+		Pattern:     "/validate/number/{number}",
 		HandlerFunc: ValidateNumber,
 	},
 }
