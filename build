@@ -1,0 +1,8 @@
+#!/bin/bash -e
+
+ORG_PATH="github.com/fake_validator"
+REPO_PATH="${ORG_PATH}"
+
+echo "Building serviced"
+CGO_ENABLED=0 go build -o bin/serviced -a -installsuffix netgo -ldflags '-s' ${REPO_PATH}
+chmod +x bin/serviced
