@@ -11,6 +11,6 @@ import (
 func main() {
 	router := router.NewRouter(endpoint.EndpointRoutes)
 
-	fmt.Printf("Running...\n")
+	fmt.Printf("Running on :8080 ...\n")
 	log.Fatal(http.ListenAndServe(":8080", router))
 }
